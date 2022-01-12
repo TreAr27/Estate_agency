@@ -1,0 +1,16 @@
+﻿    <h1>Все квартиры</h1>
+    <h3>@Model.appartCategory</h3>
+    <div class="row mt-5 mb-2">
+        @{
+            foreach (var apart in Model.allApartments)
+            {
+                <div class="col-lg-4">
+                    <img class="img-thumbnail" src="@apart.img" alt="@apart.Square" />
+                    <h2>Адрес: @apart.Address </h2>
+                    <p>Площадь: @apart.Square</p>
+                    <p>Цена: @apart.Price.ToString("c")</p>
+                    <p><a class="btn btn-warning" href="a">Подробнее</a></p>
+                </div>
+            }
+        }
+    </div>
